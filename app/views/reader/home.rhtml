@@ -1,0 +1,26 @@
+<div id="height_positioning">
+    <div id="sidebar">
+        <img src="images/feedreaderlogo.gif" width="307" height="77"/>
+    	<img class="sidebar_feeds" src="images/sidebar_feeds.gif" width="65" height="25"/>
+    	<img class="sidebar_addfeeds" src="images/addfeed.gif" width="25" height="25"/>
+    	<div class="content">
+    		 <ul class="left_nav" id="left_nav" name="left_nav">
+                <%= render(:partial => 'partials/folder_list', 
+                            :locals => {
+                                        :folders => @folder_map, 
+                                        :uncategorized => @uncategorized
+                                        }
+                            )
+                %>
+            </ul>
+    	</div>
+    	<p>
+        	<img class="sidebar_addcategory" src="images/addcategory.gif" width="95" height="25"/>
+        	<img class="sidebar_managefeeds" src="images/managefeeds.gif" width="99" height="25"/>
+    	</p>
+    	<img class="footer" src="images/footer.gif">
+    </div>
+    <span id="body">
+        <%= render(:partial => 'partials/article_list', :locals => {:articles => @selected_articles}) %>
+    </span>
+</div><!-- height_positioning -->

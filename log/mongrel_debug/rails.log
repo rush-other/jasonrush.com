@@ -1,0 +1,27 @@
+# Logfile created on Fri Apr 18 20:15:33 -0700 2008 by /
+D, [2008-04-18T20:15:33.750000 #6060] DEBUG -- : TRACING ON Fri Apr 18 20:15:33 -0700 2008
+Fri Apr 18 20:15:50 -0700 2008 REQUEST /
+--- !map:Mongrel::HttpParams 
+SERVER_NAME: localhost
+PATH_INFO: /
+HTTP_ACCEPT_ENCODING: gzip,deflate
+HTTP_USER_AGENT: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14
+SCRIPT_NAME: /
+SERVER_PROTOCOL: HTTP/1.1
+HTTP_IF_NONE_MATCH: "\"71ad8feddc8d80aa55c8680d838d3322\""
+HTTP_ACCEPT_LANGUAGE: en-us,en;q=0.5
+HTTP_HOST: localhost:3005
+REMOTE_ADDR: 127.0.0.1
+SERVER_SOFTWARE: Mongrel 1.0.1
+HTTP_KEEP_ALIVE: "300"
+REQUEST_PATH: /
+HTTP_COOKIE: _portlandshaolin_session_id=BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%250ASGFzaHsABjoKQHVzZWR7AA%253D%253D--3e57298fcfe2c84e45a615ae139f63c83290462b; _session_id=3a5154c757807a3853dab030c1ca4364
+HTTP_ACCEPT_CHARSET: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+HTTP_VERSION: HTTP/1.1
+REQUEST_URI: /
+SERVER_PORT: "3005"
+GATEWAY_INTERFACE: CGI/1.2
+HTTP_ACCEPT: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+HTTP_CONNECTION: keep-alive
+REQUEST_METHOD: GET
+

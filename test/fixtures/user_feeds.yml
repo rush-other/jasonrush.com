@@ -1,0 +1,82 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+duplicate_import:
+  id: 1
+  feed_id: 2
+  title: AMERICAblog - A great nation deserves the truth (unchanged)
+  description: AMERICAblog - A great nation deserves the truth (unchanged)
+  user_id: 1
+  active: 1
+inactivate_folder1:
+  id: 2
+  feed_id: 1
+  folder_id: 2
+  title: blah blah
+  description: blah blah blah
+  user_id: 2
+  active: 1
+inactivate_folder2:
+  id: 3
+  feed_id: 2
+  folder_id: 2
+  title: blah blah 2
+  description: blah blah blah 2
+  user_id: 2
+  active: 0
+#Feeds for the vw_articles_for_user_test
+cnn:
+  id: 4
+  feed_id: 5
+  title: CNN
+  description: CNN
+  folder_id: 6
+  user_id: 3
+  active: 1
+new_york_times:
+  id: 5
+  feed_id: 4
+  title: NYT
+  description: New York Times
+  folder_id: 6
+  user_id: 3
+  active: 1
+err:
+  id: 6
+  feed_id: 6
+  title: Err the Blog
+  description: Err the Blog
+  folder_id: 4
+  user_id: 3
+  active: 1
+rails_way:
+  id: 7
+  feed_id: 7
+  title: The Rails Way
+  description: The Rails Way
+  folder_id: 4
+  user_id: 3
+  active: 1
+digg:
+  id: 8
+  feed_id: 8
+  title: Digg
+  description: Digg / Technology
+  folder_id: 5
+  user_id: 3
+  active: 1
+#Inactive
+wired:
+  id: 9
+  feed_id: 9
+  title: Wired News
+  description: Wired News - Top Stories
+  folder_id: 5
+  user_id: 3
+  active: 0
+#Uncategorized
+xkcd:
+  id: 10
+  feed_id: 10
+  title: XKCD
+  description: XKCD.com
+  user_id: 3
+  active: 1

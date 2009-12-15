@@ -1,0 +1,3 @@
+class InvalidFeedTypeException < RuntimeError
+  
+end

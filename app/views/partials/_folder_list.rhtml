@@ -1,0 +1,53 @@
+<li class="no_image">
+    <%= link_to_remote "All Feeds", :update => "body", :loading => "show_loading();", :url => url_for(:action => 'refresh_articles', :type => :all) %>
+</li>
+<li>&nbsp;</li>
+<% folders.keys.sort.each do |title| %>
+    <li>
+        <%= render_plus_minus_icon(
+            !folders[title][:feeds].blank?,
+            "left_nav",
+            url_for(
+                :action => "expand_collapse",
+                :uncategorized => false,
+                :id => folders[title][:id]
+                )
+            )
+        %>
+        <%= link_to_remote title, :update => "body", :url => url_for(:action => 'refresh_articles', :type => :folder, :id => folders[title][:id]) %>
+        <% unless folders[title][:feeds].blank? %>
+            <ul>
+                <% folders[title][:feeds].each do |feed| %>
+                    <li>
+                        <%= link_to_remote feed.title, :update => "body", :loading => "show_loading();", :url => url_for(:action => 'refresh_articles', :type => :feed, :id => feed.id) %>
+                    </li>
+                <% end %>
+            </ul>
+        <% end %>
+    </li>
+<% end %>
+<% unless uncategorized.empty? %>
+    <li>&nbsp;</li>
+    <li>
+        <%= render_plus_minus_icon(
+            uncategorized_folder_expanded?,
+            "left_nav",
+            url_for(
+                :action => "expand_collapse",
+                :uncategorized => true
+                )
+            )
+        %>
+        <%= link_to_remote "Uncategorized Feeds", :update => "body", :loading => "show_loading();", :url => url_for(:action => 'refresh_articles', :type => :uncategorized) %>
+        </li>
+        <% if uncategorized_folder_expanded? %>
+            <ul>
+                <% uncategorized.each do |feed| %>
+                    <li>
+                        <%= link_to_remote feed.title, :update => "body", :loading => "show_loading();", :url => url_for(:action => 'refresh_articles', :type => :feed, :id => feed.id) %>
+                    </li>
+                <% end %>
+            </ul>
+        <% end %>
+    </li>
+<% end %>

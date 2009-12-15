@@ -1,0 +1,3 @@
+class NotNumericException < RuntimeError
+  
+end

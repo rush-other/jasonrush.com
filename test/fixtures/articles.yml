@@ -1,0 +1,109 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+cnn_one:
+  id: 1
+  title: First CNN Article
+  link: http://rss.cnn.com/one
+  description: This is the first CNN article for the test
+  guid: 1234567890
+  pub_date: 2008-03-29 07:50:05
+  content: Read the full article for details
+  feed_id: 5
+cnn_two:
+  id: 2
+  title: Secon CNN Article
+  link: http://rss.cnn.com/two
+  description: This is the second CNN article for the test
+  guid: 2234567890
+  pub_date: 2008-03-29 07:50:06
+  content: Read the full article for details
+  feed_id: 5
+nyt_one:
+  id: 3
+  title: First New York Times Article
+  link: http://www.nytimes.com/one
+  description: This is the first New York Times article for the test
+  guid: 3234567890
+  pub_date: 2008-03-29 07:50:07
+  content: Read the full article for details
+  feed_id: 4
+nyt_two:
+  id: 4
+  title: Second New York Times Article
+  link: http://www.nytimes.com/two
+  description: This is the second New York Times article for the test
+  guid: 4234567890
+  pub_date: 2008-03-29 07:50:08
+  content: Read the full article for details
+  feed_id: 4
+err_one:
+  id: 5
+  title: First Err the Blog Article
+  link: http://errtheblog.com/one
+  description: This is the first Err the Blog article for the test
+  guid: 5234567890
+  pub_date: 2008-03-29 07:50:08
+  content: Read the full article for details
+  feed_id: 6
+err_two:
+  id: 6
+  title: Second Err the Blog Article
+  link: http://errtheblog.com/twp
+  description: This is the second Err the Blog article for the test
+  guid: 6234567890
+  pub_date: 2008-03-29 07:50:09
+  content: Read the full article for details
+  feed_id: 6
+rails_way_one:
+  id: 7
+  title: First Rails Way Article
+  link: http://www.therailsway.com/one
+  description: This is the first Rails Way article for the test
+  guid: 7234567890
+  pub_date: 2008-03-29 07:50:10
+  content: Read the full article for details
+  feed_id: 7
+rails_way_two:
+  id: 8
+  title: Second Rails Way Article
+  link: http://www.therailsway.com/twp
+  description: This is the second Rails Way article for the test
+  guid: 8234567890
+  pub_date: 2008-03-29 07:50:11
+  content: Read the full article for details
+  feed_id: 7
+digg_one:
+  id: 9
+  title: First Digg Article
+  link: http://digg.com/tech_news/one
+  description: This is the first Digg article for the test
+  guid: 9234567890
+  pub_date: 2008-03-29 07:50:12
+  content: Read the full article for details
+  feed_id: 8
+digg_two:
+  id: 10
+  title: Second Digg Article
+  link: http://digg.com/tech_news/two
+  description: This is the second Digg article for the test
+  guid: 1034567890
+  pub_date: 2008-03-29 07:50:13
+  content: Read the full article for details
+  feed_id: 8
+wired:
+  id: 11
+  title: A Wired Article
+  link: http://wired.com/
+  description: This is an article from Wired
+  guid: 1134567890
+  pub_date: 2008-03-29 07:50:14
+  content: Read the full article for details
+  feed_id: 9
+xkcd:
+  id: 12
+  title: An XKCD comic
+  link: http://xkcd.com/
+  description: This is a comic from XKCD
+  guid: 1234567890
+  pub_date: 2008-03-29 07:50:15
+  content: Read the comic for details
+  feed_id: 10

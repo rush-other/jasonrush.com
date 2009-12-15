@@ -1,0 +1,7 @@
+<div 
+    class="article_title_bar clickable"
+    onclick="<%= remote_function(:update => 'article_' + article.id.to_s,
+      :url => { :action => :expand_article, :article => article.id }) %>">
+    <%= image_tag "arrowclosed.gif" %>
+    <%= article.title %>
+</div>

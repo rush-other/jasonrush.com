@@ -1,0 +1,20 @@
+# Logfile created on Fri Apr 18 20:15:33 -0700 2008 by /
+D, [2008-04-18T20:15:33.750000 #6060] DEBUG -- : TRACING ON Fri Apr 18 20:15:33 -0700 2008
+Fri Apr 18 20:15:48 -0700 2008 FILES OPEN BEFORE REQUEST /
+--- 
+log/mongrel_debug/objects.log: 2
+log/mongrel_debug/rails.log: 1
+log/mongrel_debug/threads.log: 1
+log/mongrel_debug/files.log: 1
+log/mongrel_debug/access.log: 1
+C:/devel/ruby/feed_weedr/log/development.log: 1
+
+FILES OPEN AT EXIT
+--- 
+log/mongrel_debug/objects.log: 2
+log/mongrel_debug/rails.log: 1
+log/mongrel_debug/threads.log: 1
+log/mongrel_debug/files.log: 1
+log/mongrel_debug/access.log: 1
+C:/devel/ruby/feed_weedr/log/development.log: 1
+

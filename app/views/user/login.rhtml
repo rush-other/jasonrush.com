@@ -1,0 +1,31 @@
+<div id="login">
+	<img class="loginlogo" src="/images/loginlogo.gif"/>
+	<div id="loginform">
+		<img src="/images/loginlg.gif">
+		<% if not flash[:errors].blank? %>
+            <div class="error_messages">
+                <% flash[:errors].each do |error| %>
+                    <%= error %>
+                    <br/>
+                <% end %>
+            </div>
+        <% end %>
+		<% form_tag :action => 'do_login' do %>
+            <p>
+                <label>Login:
+                    <br />
+                    <%= text_field_tag 'username', flash[:username] %>
+                </label>
+                <br/>
+                <label>
+                    Password:
+                    <br />
+                    <%= password_field_tag 'password' %>
+                </label>
+            </p>
+            <p>
+                <%= submit_tag 'Login' %>
+            </p>
+        <% end %>
+	</div><!-- loginform -->
+</div><!-- login -->

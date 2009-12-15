@@ -1,0 +1,3 @@
+class MutuallyExclusiveException < RuntimeError
+  
+end

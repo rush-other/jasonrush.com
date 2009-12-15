@@ -1,0 +1,3 @@
+class InvalidDataTypeException < RuntimeError
+  
+end

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+    <head>
+        <title>diminish subscriptions in Google Reader</title>
+    </head>
+    <body>
+    	<outline title="super_news" text="super_news">
+	        <outline title="news" text="news">
+	            <outline
+	                text="AMERICAblog: A great nation deserves the truth"
+	                title="AMERICAblog: A great nation deserves the truth"
+	                type="rss"
+	                xmlUrl="http://feeds.feedburner.com/Americablog" htmlUrl="http://www.americablog.com/"/>
+	            <outline text="CNN.com" title="CNN.com" type="rss"
+	                xmlUrl="http://rss.cnn.com/rss/cnn_topstories.rss" htmlUrl="http://www.cnn.com/?eref=rss_topstories"/>
+	            <outline text="NYT > Home Page" title="NYT > Home Page"
+	                type="rss"
+	                xmlUrl="http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml" htmlUrl="http://www.nytimes.com/pages/index.html?partner=rssnyt"/>
+	        </outline>
+        </outline>
+        <outline title="tech" text="tech">
+        	<outline title="devel" text="devel">
+	            <outline text="Err the Blog - Home"
+	                title="Err the Blog - Home" type="rss"
+	                xmlUrl="http://feeds.feedburner.com/errtheblog" htmlUrl="http://errtheblog.com/posts/rss"/>
+	            <outline text="Tapestry and HiveMind"
+	                title="Tapestry and HiveMind" type="rss"
+	                xmlUrl="http://tapestryjava.blogspot.com/feeds/posts/default" htmlUrl="http://tapestryjava.blogspot.com/"/>
+	            <outline text="The Rails Way - all"
+	                title="The Rails Way - all" type="rss"
+	                xmlUrl="http://feeds.feedburner.com/TheRailsWay" htmlUrl="http://www.therailsway.com/"/>
+	        </outline>
+            <outline text="Boing Boing" title="Boing Boing" type="rss"
+                xmlUrl="http://www.boingboing.net/atom.xml" htmlUrl="http://www.boingboing.net/"/>
+            <outline text="Digg / Technology" title="Digg / Technology"
+                type="rss"
+                xmlUrl="http://digg.com/rss/containertechnology.xml" htmlUrl="http://digg.com/view/technology"/>
+            <outline text="Wired News: Top Stories"
+                title="Wired News: Top Stories" type="rss"
+                xmlUrl="http://www.wired.com/rss/index.xml" htmlUrl="http://www.wired.com/rss/index.xml"/>
+        </outline>
+        <outline title="second-life" text="second-life">
+            <outline text="Beth's Second Life"
+                title="Beth's Second Life" type="rss"
+                xmlUrl="http://bethssecondlife.blogspot.com/feeds/posts/default" htmlUrl="http://bethssecondlife.blogspot.com/"/>
+            <outline
+                text="Luminosity - Second Life Clothing by Sol Columbia"
+                title="Luminosity - Second Life Clothing by Sol Columbia"
+                type="rss" xmlUrl="http://flapjack.modwest.com/atom/" htmlUrl="http://flapjack.modwest.com/"/>
+            <outline text="Millions of Us" title="Millions of Us"
+                type="rss" xmlUrl="http://millionsofus.com/blog/feed/" htmlUrl="http://millionsofus.com/blog"/>
+            <outline text="Natalia Zelmanov's Second Life Diary"
+                title="Natalia Zelmanov's Second Life Diary" type="rss"
+                xmlUrl="http://slnatalia.blogspot.com/feeds/posts/default" htmlUrl="http://www.mermaiddiaries.com/"/>
+            <outline text="New World Notes" title="New World Notes"
+                type="rss" xmlUrl="http://nwn.blogs.com/nwn/atom.xml" htmlUrl="http://nwn.blogs.com/nwn/"/>
+            <outline text="Official Linden Blog"
+                title="Official Linden Blog" type="rss"
+                xmlUrl="http://blog.secondlife.com/feed/" htmlUrl="http://blog.secondlife.com"/>
+            <outline text="Puritan's Guide to Second Life"
+                title="Puritan's Guide to Second Life" type="rss"
+                xmlUrl="http://puritansguidetosecondlife.blogspot.com/feeds/posts/default?alt=rss" htmlUrl="http://puritansguidetosecondlife.blogspot.com/"/>
+            <outline text="Reuters/Second Life"
+                title="Reuters/Second Life" type="rss"
+                xmlUrl="http://secondlife.reuters.com/stories/category/second-life/feed/atom/" htmlUrl="http://secondlife.reuters.com/stories"/>
+            <outline text="Rik's Second Life Event Picks"
+                title="Rik's Second Life Event Picks" type="rss"
+                xmlUrl="http://eventful.com/atom/groups/G0-001-003711149-9" htmlUrl="http://eventful.com/groups/G0-001-003711149-9"/>
+            <outline text="Second Life Education Research"
+                title="Second Life Education Research" type="rss"
+                xmlUrl="http://www.secondlife.intellagirl.com/feed/atom/" htmlUrl="http://www.secondlife.intellagirl.com"/>
+            <outline text="Second Life Herald"
+                title="Second Life Herald" type="rss"
+                xmlUrl="http://www.secondlifeherald.com/slh/atom.xml" htmlUrl="http://foo.secondlifeherald.com/slh/"/>
+            <outline text="Second Life Insider"
+                title="Second Life Insider" type="rss"
+                xmlUrl="http://www.secondlifeinsider.com/rss.xml" htmlUrl="http://www.secondlifeinsider.com"/>
+            <outline text="Second Opinion" title="Second Opinion"
+                type="rss"
+                xmlUrl="http://secondlife.com/newsletter/feed.xml" htmlUrl="http://secondlife.com/newsletter/"/>
+            <outline text="Second Style Fashionista"
+                title="Second Style Fashionista" type="rss"
+                xmlUrl="http://blog.secondstyle.com/feed/atom/" htmlUrl="http://blog.secondstyle.com"/>
+            <outline text="SecondLife Tutorials"
+                title="SecondLife Tutorials" type="rss"
+                xmlUrl="http://collectedsltutorials.blogspot.com/feeds/posts/default?alt=rss" htmlUrl="http://collectedsltutorials.blogspot.com/"/>
+            <outline text="Secondlife&amp;Free DownLoad"
+                title="Secondlife&amp;Free DownLoad" type="rss"
+                xmlUrl="http://secondlifefree.blogspot.com/feeds/posts/default?alt=rss" htmlUrl="http://secondlifefree.blogspot.com/"/>
+            <outline text="SLCC Blog" title="SLCC Blog" type="rss"
+                xmlUrl="http://slcc2007.wordpress.com/feed/" htmlUrl="http://slcc2007.wordpress.com"/>
+            <outline text="SLEDucating" title="SLEDucating" type="rss"
+                xmlUrl="http://www.sleducating.com/?feed=atom" htmlUrl="http://www.sleducating.com"/>
+            <outline text="SLNN" title="SLNN" type="rss"
+                xmlUrl="http://www.slnn.com/feed/feed.xml" htmlUrl="http://www.slnn.com/index.php"/>
+            <outline text="Terra Nova" title="Terra Nova" type="rss"
+                xmlUrl="http://terranova.blogs.com/terra_nova/atom.xml" htmlUrl="http://terranova.blogs.com/terra_nova/"/>
+            <outline text="Virtuniv" title="Virtuniv" type="rss"
+                xmlUrl="http://blog.virtuniv.com/atom.xml" htmlUrl="http://blog.virtuniv.com/"/>
+            <outline text="We the Sheeple" title="We the Sheeple"
+                type="rss"
+                xmlUrl="http://blogs.electricsheepcompany.com/sheep/?feed=rss2" htmlUrl="http://blogs.electricsheepcompany.com/sheep"/>
+        </outline>
+        <outline title="personal" text="personal">
+            <outline text="Digmann.com" title="Digmann.com" type="rss"
+                xmlUrl="http://feeds.feedburner.com/digmann_com" htmlUrl="http://www.digmann.com"/>
+            <outline text="Journey to Mount Hood"
+                title="Journey to Mount Hood" type="rss"
+                xmlUrl="http://mounthood.shannonmrush.com/atom.xml" htmlUrl="http://mounthood.shannonmrush.com/blog.html"/>
+            <outline text="Relatively Distant Future"
+                title="Relatively Distant Future" type="rss"
+                xmlUrl="http://relativelydistantfuture.shannonmrush.com/atom.xml" htmlUrl="http://relativelydistantfuture.shannonmrush.com/blog.html"/>
+            <outline text="Twitter / shannonmrush"
+                title="Twitter / shannonmrush" type="rss"
+                xmlUrl="http://twitter.com/statuses/user_timeline/8291562.rss" htmlUrl="http://twitter.com/shannonmrush"/>
+        </outline>
+        <outline title="funny" text="funny">
+            <outline text="Dilbert" title="Dilbert" type="rss"
+                xmlUrl="http://feeds.feedburner.com/tapestrydilbert" htmlUrl="http://www.dilbert.com/"/>
+            <outline text="The Dilbert Blog" title="The Dilbert Blog"
+                type="rss"
+                xmlUrl="http://dilbertblog.typepad.com/the_dilbert_blog/atom.xml" htmlUrl="http://dilbertblog.typepad.com/the_dilbert_blog/"/>
+        </outline>
+        <outline text="xkcd.com" title="xkcd.com" type="rss"
+        	xmlUrl="http://syndicated.livejournal.com/xkcd_rss/data/rss" htmlUrl="http://xkcd.com/"/>
+    </body>
+</opml>

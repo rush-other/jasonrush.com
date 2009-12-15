@@ -1,0 +1,37 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+duplicate:
+  id: 1
+  title: personal
+  active: 1
+  user_id: 1
+inactivate:
+  id: 2
+  title: inactivate
+  active: 1
+  user_id: 2
+inactivated:
+  id: 3
+  title: alread inactivated
+  active: 0
+  user_id: 2
+#Folders for the vw_articles_for_user_test
+devel:
+  id: 4
+  title: devel
+  active: 1
+  user_id: 3
+tech:
+  id: 5
+  title: tech
+  active: 1
+  user_id: 3
+news: 
+  id: 6
+  title: news
+  active: 1
+  user_id: 3
+old_news:
+  id: 7
+  title: old news, no longer active
+  active: 0
+  user_id: 3

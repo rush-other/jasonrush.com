@@ -1,0 +1,512 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+  <title>Jason Rush: Beholder: A Ruby Template Engine</title>
+
+  <script type="text/javascript">(function() { var a=window;function f(e){this.t={};this.tick=function(d,b,c){var i=c?c:(new Date).getTime();this.t[d]=[i,b]};this.tick("start",null,e)}var g=new f;a.jstiming={Timer:f,load:g};try{a.jstiming.pt=a.external.pageT}catch(h){};a.tickAboveFold=function(e){var d,b=e,c=0;if(b.offsetParent){do c+=b.offsetTop;while(b=b.offsetParent)}d=c;d<=750&&a.jstiming.load.tick("aft")};var j=false;function k(){if(!j){j=true;a.jstiming.load.tick("firstScrollTime")}}a.addEventListener?a.addEventListener("scroll",k,false):a.attachEvent("onscroll",k); })();</script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Jason Rush - Atom" href="http://jasonrush.com/blog/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Jason Rush - RSS" href="http://jasonrush.com/blog/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Jason Rush - Atom" href="http://www.blogger.com/feeds/4653046199291468715/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=4653046199291468715" />
+<link rel="alternate" type="application/atom+xml" title="Jason Rush - Atom" href="http://www.blogger.com/feeds/4653046199291468715/1320617763945966086/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/static/v1/v-css/3727950723-blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=4653046199291468715&zx=caf1702e-0fa0-4006-8dec-4b9298adfcff"/>
+
+  <style type="text/css">
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     Minima
+Designer: Douglas Bowman
+URL:      www.stopdesign.com
+Date:     26 Feb 2004
+----------------------------------------------- */
+
+
+body {
+  background:#fff;
+  margin:0;
+  padding:40px 20px;
+  font:x-small Georgia,Serif;
+  text-align:center;
+  color:#333;
+  font-size/* */:/**/small;
+  font-size: /**/small;
+  }
+a:link {
+  color:#58a;
+  text-decoration:none;
+  }
+a:visited {
+  color:#969;
+  text-decoration:none;
+  }
+a:hover {
+  color:#c60;
+  text-decoration:underline;
+  }
+a img {
+  border-width:0;
+  }
+
+
+/* Header
+----------------------------------------------- */
+@media all {
+  #header {
+    width:660px;
+    margin:0 auto 10px;
+    border:1px solid #ccc;
+    }
+  }
+@media handheld {
+  #header {
+    width:90%;
+    }
+  }
+#blog-title {
+  margin:5px 5px 0;
+  padding:20px 20px .25em;
+  border:1px solid #eee;
+  border-width:1px 1px 0;
+  font-size:200%;
+  line-height:1.2em;
+  font-weight:normal;
+  color:#666;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  }
+#blog-title a {
+  color:#666;
+  text-decoration:none;
+  }
+#blog-title a:hover {
+  color:#c60;
+  }
+#description {
+  margin:0 5px 5px;
+  padding:0 20px 20px;
+  border:1px solid #eee;
+  border-width:0 1px 1px;
+  max-width:700px;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#999;
+  }
+
+/* Content
+----------------------------------------------- */
+@media all {
+  #content {
+    width:660px;
+    margin:0 auto;
+    padding:0;
+    text-align:left;
+    }
+  #main {
+    width:410px;
+    float:left;
+    }
+  #sidebar {
+    width:220px;
+    float:right;
+    }
+  }
+@media handheld {
+  #content {
+    width:90%;
+    }
+  #main {
+    width:100%;
+    float:none;
+    }
+  #sidebar {
+    width:100%;
+    float:none;
+    }
+  }
+
+/* Headings
+----------------------------------------------- */
+h2 {
+  margin:1.5em 0 .75em;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#999;
+  }
+
+
+/* Posts
+----------------------------------------------- */
+@media all {
+  .date-header {
+    margin:1.5em 0 .5em;
+    }
+  .post {
+    margin:.5em 0 1.5em;
+    border-bottom:1px dotted #ccc;
+    padding-bottom:1.5em;
+    }
+  }
+@media handheld {
+  .date-header {
+    padding:0 1.5em 0 1.5em;
+    }
+  .post {
+    padding:0 1.5em 0 1.5em;
+    }
+  }
+.post-title {
+  margin:.25em 0 0;
+  padding:0 0 4px;
+  font-size:140%;
+  font-weight:normal;
+  line-height:1.4em;
+  color:#c60;
+  }
+.post-title a, .post-title a:visited, .post-title strong {
+  display:block;
+  text-decoration:none;
+  color:#c60;
+  font-weight:normal;
+  }
+.post-title strong, .post-title a:hover {
+  color:#333;
+  }
+.post div {
+  margin:0 0 .75em;
+  line-height:1.6em;
+  }
+p.post-footer {
+  margin:-.25em 0 0;
+  color:#ccc;
+  }
+.post-footer em, .comment-link {
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+.post-footer em {
+  font-style:normal;
+  color:#999;
+  margin-right:.6em;
+  }
+.comment-link {
+  margin-left:.6em;
+  }
+.post img {
+  padding:4px;
+  border:1px solid #ddd;
+  }
+.post blockquote {
+  margin:1em 20px;
+  }
+.post blockquote p {
+  margin:.75em 0;
+  }
+
+
+/* Comments
+----------------------------------------------- */
+#comments h4 {
+  margin:1em 0;
+  font:bold 78%/1.6em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#999;
+  }
+#comments h4 strong {
+  font-size:130%;
+  }
+#comments-block {
+  margin:1em 0 1.5em;
+  line-height:1.6em;
+  }
+#comments-block dt {
+  margin:.5em 0;
+  }
+#comments-block dd {
+  margin:.25em 0 0;
+  }
+#comments-block dd.comment-timestamp {
+  margin:-.25em 0 2em;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+#comments-block dd p {
+  margin:0 0 .75em;
+  }
+.deleted-comment {
+  font-style:italic;
+  color:gray;
+  }
+.paging-control-container {
+  float: right;
+  margin: 0px 6px 0px 0px;
+  font-size: 80%;
+}
+.unneeded-paging-control {
+  visibility: hidden;
+}
+
+/* Sidebar Content
+----------------------------------------------- */
+#sidebar ul {
+  margin:0 0 1.5em;
+  padding:0 0 1.5em;
+  border-bottom:1px dotted #ccc;
+  list-style:none;
+  }
+#sidebar li {
+  margin:0;
+  padding:0 0 .25em 15px;
+  text-indent:-15px;
+  line-height:1.5em;
+  }
+#sidebar p {
+  color:#666;
+  line-height:1.5em;
+  }
+
+
+/* Profile
+----------------------------------------------- */
+#profile-container {
+  margin:0 0 1.5em;
+  border-bottom:1px dotted #ccc;
+  padding-bottom:1.5em;
+  }
+.profile-datablock {
+  margin:.5em 0 .5em;
+  }
+.profile-img {
+  display:inline;
+  }
+.profile-img img {
+  float:left;
+  padding:4px;
+  border:1px solid #ddd;
+  margin:0 8px 3px 0;
+  }
+.profile-data {
+  margin:0;
+  font:bold 78%/1.6em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+.profile-data strong {
+  display:none;
+  }
+.profile-textblock {
+  margin:0 0 .5em;
+  }
+.profile-link {
+  margin:0;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+
+
+/* Footer
+----------------------------------------------- */
+#footer {
+  width:660px;
+  clear:both;
+  margin:0 auto;
+  }
+#footer hr {
+  display:none;
+  }
+#footer p {
+  margin:0;
+  padding-top:15px;
+  font:78%/1.6em "Trebuchet MS",Trebuchet,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+
+
+/* Feeds
+----------------------------------------------- */
+#blogfeeds {
+  }
+#postfeeds {
+  }
+  </style>
+
+</head>
+
+<body>
+
+<div id="header">
+
+  <h1 id="blog-title">
+    <a href="http://jasonrush.com/blog/">
+	Jason Rush
+	</a>
+  </h1>
+  <p id="description"></p>
+
+</div>
+
+<!-- Begin #content -->
+<div id="content">
+
+
+<!-- Begin #main -->
+<div id="main"><div id="main2">
+
+
+
+    
+  <h2 class="date-header">Tuesday, May 12, 2009</h2>
+  
+
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="1320617763945966086"></a>
+         
+    <h3 class="post-title">
+	 
+	 Beholder: A Ruby Template Engine
+	 
+    </h3>
+    
+
+	         <div class="post-body">
+	<div>
+      <div style="clear:both;"></div>I started up a new project to create a template engine for Ruby web apps.  The beginnings of it are on github <a href="http://github.com/diminish7/beholder/tree/master">here</a>.  It's very, very rough, so don't judge yet. :-)<br /><br />I know there are a ton of template engines out there.  But here's my complaint with them: often the person developing the front end of an app is primarily an HTML/CSS/JavaScript developer.  They may not know Ruby at all.  So template engines like Markaby and Hoshi are out.  ERB is the most HTML-like template engine, but a) it's still got Ruby mixed into it, so it isn't ideal for strictly front-end developers, and b) it's a mixture of Ruby and HTML, which is ugly and spaghetti-ish.<br /><br />Enter Beholder.<br /><br />Beholder is a template engine comprised of HTML tags.  Dynamic behavior is accomplished through the use attributes.  So, for example, if you have a page and you want to show a chunk of it conditionally, you could do something like this:<br /><blockquote>&#060;html><br />    &#060;head><br />        &#060;title>Hello World&#060;/title><br />    &#060;/head><br />    &#060;body><br />        &#060;span component="if" condition="true"><br />            Body of 'if' component<br />        &#060;/span><br />        &#060;span component="elsif" condition="true"><br />            Body of 'elsif' component<br />        &#060;/span><br />        &#060;span component="else"><br />            Body of 'else' component<br />        &#060;/span><br />    &#060;/body><br />&#060;/html><br /></blockquote>Which would be rendered as:<br /><blockquote>&#060;html><br />    &#060;head><br />        &#060;title>Hello World&#060;/title><br />    &#060;/head><br />    &#060;body><br />            Body of 'if' component<br />    &#060;/body><br />&#060;/html></blockquote><blockquote></blockquote>The 'component' attribute can either refer to a built in control flow structure, such as 'if', or 'foreach', or it can refer to a partial, so you can embed mini-beholder templates in your main template.  There is also a 'yield' component, so each component can act like a layout, generating it's HTML, and then yielding the content within the component node in the template.<br /><br />In addition, any attribute can be made dynamically by including the 'prop:' prefix.  So if you have a template like this:<br /><blockquote>&#060;html><br />    &#060;head><br />        &#060;title>Hello World&#060;/title><br />    &#060;/head><br />    &#060;body><br />        &#060;span component="simple_component" message_class="beholder" /><br />    &#060;/body><br />&#060;/html><span component="simple_component" message_class="beholder"><br /></span></blockquote>And a partial called simple_component.beh like this:<br /><blockquote>&#060;p class="prop:message_class">What's up, world?&#060;/p><br /></blockquote>It would be rendered like this:<br /><blockquote><blockquote>&#060;html><br />    &#060;head><br />        &#060;title>Hello World&#060;/title><br />    &#060;/head><br />    &#060;body><br />        &#060;p class="beholder">What's up, world?&#060;/p><br />    &#060;/body><br />&#060;/html><span component="simple_component" message_class="beholder"><br /></span></blockquote></blockquote>The 'prop:' prefixed attributes get evaluated as (in this order) a) the value of the parent component's attribute with that name, b) the value of a local variable of that name, or c) a method in the helper class.  (Note that I've only implemented a) right now... so you'll just have to trust me that that's where I'm going.)<br /><br />This is modeled after <a href="http://tapestry.apache.org/">Tapestry </a>templates (Java) and <a href="http://www.kid-templating.org/">Kid </a>templates (Python).  Anyway, there's a lot of work to be done on it (particularly around the evaluation of 'prop:' attributes), but I like the idea of it a lot.<br /><blockquote></blockquote><blockquote></blockquote><blockquote></blockquote><div style="clear:both; padding-bottom:0.25em"></div>
+    </div>
+    </div>
+    
+    <p class="post-footer">
+      <em>posted by Jason at 
+    <a class="post-footer-link" href="http://jasonrush.com/blog/2009/05/beholder-ruby-template-engine.html" title="permanent link"> 9:28 PM </a></em>
+        <span class="item-control blog-admin pid-1176500513"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=4653046199291468715&postID=1320617763945966086" title="Edit Post"><img class="icon-action" alt="" src="http://www.blogger.com:80/img/icon18_edit_allbkg.gif" height="18" width="18"></a></span>
+    </p>
+  
+  </div>
+  <!-- End .post -->
+  
+  
+  
+  <!-- Begin #comments -->
+ 
+  <div id="comments">
+
+	<a name="comments"></a>
+    <h4>0 Comments:</h4>
+    <dl id="comments-block">
+      
+      
+      
+    </dl>
+		<p class="comment-timestamp">
+      <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=4653046199291468715&postID=1320617763945966086">Post a Comment</a>
+    </p>
+    <p id="postfeeds"></p>
+  
+    
+
+
+		<p class="comment-timestamp">
+	<a href="http://jasonrush.com/blog/">&lt;&lt; Home</a>
+    </p>
+    </div>
+
+
+
+  <!-- End #comments -->
+
+<script type="text/javascript" src="http://www.blogger.com/static/v1/common/js/327583163-csitaillib.js"></script>
+<script>if (typeof(window.attachCsiOnload) != 'undefined' && window.attachCsiOnload != null) { window.attachCsiOnload('ext_blogspot'); }</script>
+</div></div>
+<!-- End #main -->
+
+
+
+
+
+
+
+<!-- Begin #sidebar -->
+<div id="sidebar"><div id="sidebar2">
+  
+  
+  <!-- Begin #profile-container -->
+
+   <div id="profile-container"><h2 class="sidebar-title">About Me</h2>
+<dl class="profile-datablock"><dt class="profile-img"><a href="http://www.blogger.com/profile/16806243609100183836"><img src="http://2.bp.blogspot.com/_SIexhu2TcNI/SRd_w9JJIBI/AAAAAAAAAAM/Bl6IVRMN6xo/S220/jason.jpg" width="53" height="80" alt="My Photo"></a></dt>
+<dd class="profile-data"><strong>Name:</strong>  Jason Rush </dd>
+<dd class="profile-data"><strong>Location:</strong>  Santa Monica, CA, United States </dd></dl>
+
+<p class="profile-link"><a href="http://www.blogger.com/profile/16806243609100183836">View my complete profile</a></p></div>
+   
+  <!-- End #profile -->
+    
+        
+
+  <iframe src="http://www.clappies.com/widgets/26" frameborder="0" width="60" height="50"></iframe> 
+  <h2 class="sidebar-title">Previous Posts</h2>
+    <ul id="recently">
+    
+        <li><a href="http://jasonrush.com/blog/2009/05/ruby-html-template-engines.html">Ruby HTML Template Engines</a></li>
+     
+        <li><a href="http://jasonrush.com/blog/2009/04/more-logic-games.html">More Logic Games</a></li>
+     
+        <li><a href="http://jasonrush.com/blog/2009/04/logic-games-almost-there.html">Logic Games: Almost There!</a></li>
+     
+        <li><a href="http://jasonrush.com/blog/2009/04/start-of-dsl.html">The Start of a DSL</a></li>
+     
+        <li><a href="http://jasonrush.com/blog/2009/04/victory.html">Victory!</a></li>
+     
+        <li><a href="http://jasonrush.com/blog/2009/02/rule-engine.html">Rule Engine</a></li>
+     
+        <li><a href="http://jasonrush.com/blog/2009/01/finally-some-progress.html">Finally, Some Progress</a></li>
+     
+        <li><a href="http://jasonrush.com/blog/2009/01/crazy-busy.html">Crazy Busy...</a></li>
+     
+        <li><a href="http://jasonrush.com/blog/2008/12/rule-grammar-persistence.html">Rule Grammar Persistence</a></li>
+     
+        <li><a href="http://jasonrush.com/blog/2008/11/brute-force.html">Brute Force</a></li>
+     
+  </ul>
+    
+
+      <p id="powered-by"><a href="http://www.blogger.com"><img src="http://buttons.blogger.com/bloggerbutton1.gif" alt="Powered by Blogger" /></a></p>
+      <p id="blogfeeds">Subscribe to<br/>Posts [<a target="_blank" href="http://jasonrush.com/blog/atom.xml" type="application/atom+xml">Atom</a>]</p>
+  
+  <!--
+  <p>This is a paragraph of text that could go in the sidebar.</p>
+  -->
+  
+
+
+</div></div>
+<!-- End #sidebar -->
+
+
+</div>
+<!-- End #content -->
+
+
+
+<!-- Begin #footer -->
+<div id="footer"><hr />
+  <p><!--This is an optional footer. If you want text here, place it inside these tags, and remove this comment. -->&nbsp;</p>
+
+</div>
+<!-- End #footer -->
+
+
+
+</body>
+</html>

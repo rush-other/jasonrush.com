@@ -1,0 +1,201 @@
+/* General */
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	height: 100%;	
+	font-size: 12px;
+}
+a img {
+	border: none;
+}
+ul li {
+	list-style-type: none;
+}
+ul.left_nav {
+	font-family: arial, verdana, helvetica, sans-serif;
+}
+ul.left_nav a {
+	font-size: 16px;
+	text-decoration: none;
+	color: #000;
+}
+ul.left_nav li ul a {
+	font-size: 12px;
+}
+ul.left_nav li.no_image {
+	padding-left: 10px;
+}
+ul.article_list {
+	padding-left: 20px;
+}
+ul.article_list li {
+	
+}
+
+#height_positioning {
+	position: absolute; top:0px; bottom:0px; left:0px; right:0px; width: 100%; height:100%;
+}
+
+/* Sidebar */
+#sidebar {
+	position: absolute; top: 0; left: 0;
+	background-image: url(../images/sidebarbg.gif);
+	background-repeat: repeat-y;
+	background-color: #ffffff;
+	width: 307px;
+	height: 100%;
+	z-index: 2;
+}
+#sidebar .sidebar_feeds {
+	padding-left: 50px;
+	float: left;
+}
+#sidebar .sidebar_addfeeds {
+	padding-right: 10px;
+	float: right;
+}
+#sidebar .sidebar_addcategory {
+	position: absolute; bottom: 20px; left: 10px;
+}
+#sidebar .sidebar_managefeeds {
+	position: absolute; bottom: 20px; left: 197px;
+}
+#sidebar .content {
+	padding-top: 50px;
+}
+#sidebar .content ul {
+	padding-left: 40px;
+	padding-right: 20px;
+}
+
+/* Main */
+#main {
+	position: relative; top: 0; left: 0;
+	background-image: url(../images/headerbg.gif);
+	background-repeat: repeat-x;
+	background-color: #ffffff;
+	padding-left: 307px;
+	padding-top: 72px;
+}
+#main .main_register {
+	position: absolute; right: 0; top: 0;
+}
+#main .main_login {
+	position: absolute; right: 45px; top: 0;
+}
+/* Blocks */
+.clickable {
+	cursor: pointer;
+}
+.article_title_bar {
+	font-family: "times new roman", times, garamond, serif;
+	font-size: 18px;
+	color: #000;
+	padding-bottom: 2px;
+}
+.article_title_bar img {
+	padding-right: 15px;
+}
+.article_link_bar {
+	margin-left: 35px;
+}
+.article_link_bar a.title_link {
+	font-size: 22px;
+	text-decoration: underline;
+	color: #55BE47;
+	margin-left: 20px;
+}
+.article_summary {
+	padding-bottom: 25px;
+	font-size: 14px;
+}
+.feed_title {
+	background-color: #9FD98B;
+	color: #40A43C;
+	font-family: arial, sans-serif;
+	font-size: 1.4em;
+	font-weight: bold;
+    position: absolute; left: 317px; top: 87px;
+	z-index: 2;
+}
+.unsubscribe {
+	position: absolute; right: 10px; top: 87px;
+	z-index: 2;
+}
+.paging {
+	width: 100%;
+	height: 20px;
+	padding: 2px;
+	text-align: center;
+}
+
+.paging a {
+	text-decoration: none;
+	color: #000;
+}
+.waiting {
+	width: 100%;
+	text-align: center;
+}
+
+.error_messages {
+	color: #ff0000;
+}
+
+#main_rnd_container {background: #ffffff; margin:1px;}
+.main_rnd_top, .main_rnd_bottom {display:block; background:#ffffff; font-size:1px;}
+.main_rnd_b1, .main_rnd_b2, .main_rnd_b3, .main_rnd_b4 {display:block; overflow:hidden;}
+.main_rnd_b1, .main_rnd_b2, .main_rnd_b3 {height: 1px;}
+.main_rnd_b2, .main_rnd_b3, .main_rnd_b4 {background: #9FD98B; border-left: 1px solid #9FD98B; border-right: 1px solid #9FD98B;}
+.main_rnd_b1 {margin:0 5px; background:#9FD98B;}
+.main_rnd_b2 {margin:0 3px; border-width:0 2px;}
+.main_rnd_b3 {margin:0 2px;}
+.main_rnd_b4 {height:2px; margin:0 1px;}
+.main_rnd_content {
+	display:block;
+	border:0 solid #9FD98B;
+	border-width:0 1px;
+	padding: 4px;
+	background: #9FD98B;
+	color:#000000;
+}
+#inner_rnd_container {background: #9FD98B; margin:1px; margin-top: 40px;}
+.inner_rnd_top, .inner_rnd_bottom {display:block; background:#9FD98B; font-size:1px;}
+.inner_rnd_b1, .inner_rnd_b2, .inner_rnd_b3, .inner_rnd_b4 {display:block; overflow:hidden;}
+.inner_rnd_b1, .inner_rnd_b2, .inner_rnd_b3 {height:1px;}
+.inner_rnd_b2, .inner_rnd_b3, .inner_rnd_b4 {background:#ffffff; border-left:1px solid #ffffff; border-right:1px solid #ffffff;}
+.inner_rnd_b1 {margin:0 5px; background:#ffffff;}
+.inner_rnd_b2 {margin:0 3px; border-width:0 2px;}
+.inner_rnd_b3 {margin:0 2px;}
+.inner_rnd_b4 {height:2px; margin:0 1px;}
+.inner_rnd_content {
+    display:block;
+    border:0 solid #ffffff;
+    border-width:0 1px;
+    padding: 4px;
+    background:#ffffff;
+    color:#000000;
+}
+
+.footer {
+    position: absolute; bottom: 0; left: 0; z-index: 10;
+}
+
+/* Login */
+#login {
+	width: 100%;
+	background-color: #ffffff;
+	background-image: url(../images/loginbg.gif);
+	background-repeat: repeat-x;
+}
+
+#login img .loginlogo {
+	position: absolute; left: 0; top: 0;
+}
+
+#loginform {
+	padding-left: 45%;
+	padding-top: 10%;
+}

@@ -1,0 +1,16 @@
+<div class="paging">
+    <% if articles.has_pages %>
+        <% if articles.has_prev_page %>
+            <%= link_to_remote image_tag("dblleft.gif"), :update => "body", :loading => "show_loading();", :url => {:action => "refresh_articles", :first => true} %>&nbsp;&nbsp;&nbsp;
+            <%= link_to_remote image_tag("pagelt.gif"), :update => "body", :loading => "show_loading();", :url => {:action => "refresh_articles", :page => articles.prev_page} %>
+        <% else %>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <% end %>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page: <%= articles.page %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <% if articles.has_next_page %>
+            <%= link_to_remote image_tag("pagert.gif"), :update => "body", :loading => "show_loading();", :url => {:action => "refresh_articles", :page => articles.next_page} %>&nbsp;&nbsp;&nbsp;
+        <% else %>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <% end %>
+    <% end %>
+</div>

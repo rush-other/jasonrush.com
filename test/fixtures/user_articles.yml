@@ -1,0 +1,44 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+unique:
+  id: 1
+  article_id: 2
+  user_id: 1
+#For the vw_articles_for_user_test
+# User Articles for every other article to
+# test both rated and previously unrated articles
+cnn_one:
+  id: 2
+  article_id: 1
+  user_id: 3
+  unread: 1
+  rating: 3
+nyt_one:
+  id: 3
+  article_id: 3
+  user_id: 3
+  unread: 0
+  rating: 3
+err_one:
+  id: 4
+  article_id: 5
+  user_id: 3
+  unread: 1
+  rating: 3
+rails_way_one:
+  id: 5
+  article_id: 7
+  user_id: 3
+  unread: 0
+  rating: 3
+digg_one:
+  id: 6
+  article_id: 9
+  user_id: 3
+  unread: 1
+  rating: 3
+wired:
+  id: 7
+  article_id: 11
+  user_id: 3
+  unread: 0
+  rating: 3

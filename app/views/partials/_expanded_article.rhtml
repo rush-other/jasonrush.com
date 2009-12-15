@@ -1,0 +1,17 @@
+<div 
+    class="article_title_bar clickable"
+    onclick="<%= remote_function(:update => 'article_' + article.id.to_s,
+      :url => { :action => :collapse_article, :article => article.id }) %>">
+    <%= image_tag "arrowopen.gif" %>
+    <%= article.title %>
+</div>
+<div class="article_link_bar">
+    <a href="<%=article.link%>" class="title_link" target="_blank">
+        <%=article.title%>
+    </a>
+    <br/>
+    <br/>
+<div>
+<div class="article_summary">
+    <%= article.description %>
+</div>

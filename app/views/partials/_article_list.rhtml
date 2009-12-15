@@ -1,0 +1,31 @@
+<span class="feed_title"><%= articles.title %></span>
+<img class="unsubscribe" src="images/unsubscribe.gif" width="20" height="20"/>
+<div id="main">
+	<img class="main_register" src="images/register.gif" width="45" height="15"/>
+	<img class="main_login" src="images/login.gif" width="30" height="15"/>
+	<div id="main_rnd_container">
+        <b class="main_rnd_top"><b class="main_rnd_b1"></b><b class="main_rnd_b2"></b><b class="main_rnd_b3"></b><b class="main_rnd_b4"></b></b>
+    		<div class="main_rnd_content"> 
+    			<div id="inner_rnd_container">
+    			    <%= render(:partial => "partials/paging_links", :locals => {:articles => @selected_articles}) %>
+    				<b class="inner_rnd_top"><b class="inner_rnd_b1"></b><b class="inner_rnd_b2"></b><b class="inner_rnd_b3"></b><b class="inner_rnd_b4"></b></b>
+    					<div id="inner_rnd_content" class="inner_rnd_content"> 
+        					<ul class="article_list">
+                                <% if @selected_articles.empty? %>
+                                    There are no articles to display
+                                <% else %>
+                                    <% @selected_articles.each do |article| %>
+                                        <li id="article_<%= article.id.to_s %>" name="article_<%= article.id.to_s %>">
+                                            <%= render(:partial => "partials/collapsed_article", :locals => {:article => article}) %>
+                                        </li>
+                                    <% end %>
+                                <% end %>
+                            </ul>
+    					</div><!-- .inner_rnd_content -->
+    				<b class="inner_rnd_bottom"><b class="inner_rnd_b4"></b><b class="inner_rnd_b3"></b><b class="inner_rnd_b2"></b><b class="inner_rnd_b1"></b></b>
+    			</div><!-- inner_rnd_container -->
+    			<%= render(:partial => "partials/paging_links", :locals => {:articles => @selected_articles}) %>
+    		</div><!-- .main_rnd_content -->
+    	<b class="main_rnd_bottom"><b class="main_rnd_b4"></b><b class="main_rnd_b3"></b><b class="main_rnd_b2"></b><b class="main_rnd_b1"></b></b>
+    </div><!-- main_rnd_container -->
+</div><!-- main -->

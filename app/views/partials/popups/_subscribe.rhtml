@@ -1,0 +1,26 @@
+<div id="subscribe_popup" class="popup" style="display:none;">
+    <b class="main_rnd_top"><b class="main_rnd_b1"></b><b class="main_rnd_b2"></b><b class="main_rnd_b3"></b><b class="main_rnd_b4"></b></b>
+        <div class="main_rnd_content"> 
+            <div class="close" onclick="new Effect.Fade('subscribe_popup', {duration:0.5});">X</div>
+            <% form_remote_tag(
+                :url => {:action => 'do_subscribe'},
+                :update => { :success => "posts", :failure => "error" }) do %>
+                Add Feed
+                <br/>
+                URL: <%= text_field_tag 'url' %>
+                <br/>
+                Category 
+                <select id='folder_id' name="folder_id">
+                    <option/>
+                    <% @folder_map.keys.each do |label| %>
+                        <option value=<%=@folder_map[label][:id]%>><%= label %></option>
+                    <% end %>
+                </select>
+                <br/>
+                <%= submit_tag "Subscribe" %>
+            <% end %>
+    	</div><!-- .main_rnd_content -->
+	<b class="main_rnd_bottom"><b class="main_rnd_b4"></b><b class="main_rnd_b3"></b><b class="main_rnd_b2"></b><b class="main_rnd_b1"></b></b>
+</div><!-- main_rnd_container -->
+	     
+    			

@@ -1,0 +1,66 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+unique_feed:
+  id: 1
+  xml_url: http://rss.cnn.com/rss/cnn_topstories.rss
+  html_url: http://www.cnn.com/?eref=rss_topstories
+  title: cnn
+  feed_type: 0
+  last_updated: 2008-02-01 00:00:00
+  last_queried: 2008-02-01 00:00:00
+  
+duplicate_feed_in_folder:
+  id: 2
+  xml_url: http://feeds.feedburner.com/Americablog
+  html_url: http://www.americablog.com/
+  feed_type: 1
+  title: AMERICAblog - A great nation deserves the truth (unchanged)
+  description: AMERICAblog - A great nation deserves the truth (unchanged)
+  
+another_feed:
+  id: 3
+  xml_url: http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml
+  html_url: http://www.nytimes.com/pages/index.html?partner=rssnyt
+  title: NYT > Home Page
+#Feeds for the vw_articles_for_user_test
+new_york_times:
+  id: 4
+  xml_url: http://www.nytimes.com/services/xml/rss/nyt.xml
+  html_url: http://www.nytimes.com/pages/index.html?partner=rssnyt
+  feed_type: 0
+  title: NYT > Home Page
+cnn:
+  id: 5
+  xml_url: http://rss.cnn.com/rss/cnn_topstories.xml
+  html_url: http://www.cnn.com/?eref=rss_topstories
+  feed_type: 0
+  title: CNN.com
+err:
+  id: 6
+  xml_url: http://feeds.feedburner.com/errtheblog
+  html_url: http://errtheblog.com/posts/rss
+  feed_type: 1
+  title: Err the Blog
+rails_way:
+  id: 7
+  xml_url: http://feeds.feedburner.com/TheRailsWay
+  html_url: http://www.therailsway.com/
+  feed_type: 1
+  title: The Rails Way
+digg:
+  id: 8
+  xml_url: http://digg.com/rss/containertechnology.xml
+  html_url: http://digg.com/view/technology
+  feed_type: 0
+  title: Digg / Technology
+wired:
+  id: 9
+  xml_url: http://www.wired.com/rss/index.xml
+  html_url: http://www.wired.com/rss/index.xml
+  feed_type: 1
+  title: Wired News - Top Stories
+xkcd:
+  id: 10
+  xml_url: http://syndicated.livejournal.com/xkcd_rss/data/rss
+  html_url: http://xkcd.com/
+  feed_type: 0
+  title: XKCD

@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+unqiue:
+  id: 1
+  username: unique
+  password: password
+  first_name: First
+  last_name: Last
+  email: email@email.com
+  active: 1
+inactivate:
+  id: 2
+  username: inactivate
+  password: password
+  first_name: Inactivate
+  last_name: Inactivate
+  email: email@email.com
+  active: 1
+inactive:
+  id: 3
+  username: inactive
+  password: password
+  first_name: First
+  last_name: Last
+  email: email@email.com
+  active: 0
